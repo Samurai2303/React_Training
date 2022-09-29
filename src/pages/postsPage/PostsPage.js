@@ -1,10 +1,10 @@
+import {Posts} from "../../components";
+
 function PostsPage() {
 
-  return (
-      <div>
-
-      </div>
-  );
+    return (
+        <Posts/>
+    );
 }
 
 export {PostsPage};

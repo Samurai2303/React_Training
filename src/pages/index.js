@@ -6,3 +6,7 @@ export * from './photosPage/PhotosPage';
 export * from './notFoundPage/NotFoundPage';
 export * from './postsPage/PostsPage';
 export * from './usersPage/UsersPage';
+export * from './todosPage/TodosPage';
+export * from './userPostsPage/UserPostsPage';
+export * from './userAlbumsPage/UserAlbumsPage';
+export * from './userTodosPage/UserTodosPage';

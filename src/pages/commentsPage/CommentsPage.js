@@ -1,10 +1,10 @@
+import {Comments} from "../../components";
+
 function CommentsPage() {
 
-  return (
-      <div>
-
-      </div>
-  );
+    return (
+        <Comments/>
+    );
 }
 
 export {CommentsPage};

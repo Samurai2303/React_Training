@@ -1,10 +1,10 @@
+import {Albums} from "../../components";
+
 function AlbumPage() {
 
-  return (
-      <div>
-
-      </div>
-  );
+    return (
+        <Albums/>
+    );
 }
 
 export {AlbumPage};

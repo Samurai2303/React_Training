@@ -1,10 +1,10 @@
+import {NotFound} from "../../components";
+
 function NotFoundPage() {
 
-  return (
-      <div>
-
-      </div>
-  );
+    return (
+        <NotFound/>
+    );
 }
 
 export {NotFoundPage};

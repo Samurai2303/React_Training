@@ -1,10 +1,10 @@
+import {Photos} from "../../components";
+
 function PhotosPage() {
 
-  return (
-      <div>
-
-      </div>
-  );
+    return (
+        <Photos/>
+    );
 }
 
 export {PhotosPage};

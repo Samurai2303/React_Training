@@ -1,10 +1,10 @@
+import {Header} from "../../components";
+
 function HeaderPage() {
 
-  return (
-      <div>
-
-      </div>
-  );
+    return (
+        <Header/>
+    );
 }
 
 export {HeaderPage};
