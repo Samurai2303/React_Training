@@ -1,26 +1,24 @@
-import {NavLink, Outlet} from "react-router-dom";
-import {urls} from "../../configs";
+import {NavLink, useNavigate} from "react-router-dom";
 import css from './header.module.css';
 
 function Header() {
+    let navigate = useNavigate();
 
-  return (
-      <div>
-          <div className={css.header}>
-          <button>Prev</button>
-          <button>Next</button>
-          <NavLink to={''}>Home</NavLink>
-          <NavLink to={urls.users}>Users</NavLink>
-          <NavLink to={urls.posts}>Posts</NavLink>
-          <NavLink to={urls.comments}>Comments</NavLink>
-          <NavLink to={urls.albums}>Albums</NavLink>
-          <NavLink to={urls.photos}>Photos</NavLink>
-          <NavLink to={urls.todos}>Todos</NavLink>
-          </div>
-          <Outlet/>
+    return (
+        <div className={css.wrap}>
+            <div className={css.navLinks}>
+                <div>
+                    <button onClick={()=>navigate(-1)}>Prev</button>
+                    <button onClick={()=>navigate(1)}>Next</button>
+                </div>
+                <NavLink to={'/home'}>Home</NavLink>
+                <NavLink to={'/users'}>Users</NavLink>
+                <NavLink to={'/posts'}>Posts</NavLink>
+                <NavLink to={'/about'}>About</NavLink>
+            </div>
 
-      </div>
-  );
+        </div>
+    );
 }
 
 export {Header};

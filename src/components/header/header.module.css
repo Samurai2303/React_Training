@@ -1,6 +1,17 @@
-.header{
-    display: flex;
+.wrap {
+    background: silver;
+    gap: 10px;
+}
+
+.navLinks {
     background: lightskyblue;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     padding: 10px;
-    flex-wrap: wrap;
+}
+
+.navLinks a[class='active']{
+    color: darkred;
+    font-weight: 700;
 }

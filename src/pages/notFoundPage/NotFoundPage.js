@@ -1,9 +1,9 @@
-import {NotFound} from "../../components";
-
 function NotFoundPage() {
 
     return (
-        <NotFound/>
+        <div>
+            Not found
+        </div>
     );
 }
 

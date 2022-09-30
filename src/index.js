@@ -5,14 +5,12 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import {BrowserRouter} from "react-router-dom";
 
-let Context = createContext({});
+// let Context = createContext({});
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
     <BrowserRouter>
-        <Context>
             <App/>
-        </Context>
     </BrowserRouter>
 );
 

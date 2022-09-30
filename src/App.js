@@ -1,37 +1,23 @@
 import './App.css';
-import {Route, Routes} from "react-router-dom";
-import {
-    AlbumPage,
-    CommentsPage,
-    HeaderPage,
-    HomePage,
-    NotFoundPage,
-    PhotosPage, PostCommentsPage,
-    PostsPage,
-    TodosPage, UserAlbumsPage, UserPostsPage,
-    UsersPage, UserTodosPage
-} from "./pages";
+import {Route, Routes, Navigate} from "react-router-dom";
+import {MainLayout} from "./layouts";
+import {AboutPage, HomePage, NotFoundPage, PostDetailsPage, PostsPage, UsersPage} from "./pages";
 
 function App() {
 
     return (
         <div>
             <Routes>
-                <Route path={'/'} element={<HeaderPage/>}>
-                    <Route index element={<HomePage/>}/>
-                    <Route path={'/albums'} element={<AlbumPage/>}/>
-                    <Route path={'/comments'} element={<CommentsPage/>}/>
-                    <Route path={'/photos'} element={<PhotosPage/>}/>
-                    <Route path={'/posts'} element={<PostsPage/>}/>
+                <Route path={'/'} element={<MainLayout/>}>
+                    <Route index element={<Navigate to={'/home'}/>}/>
+                    <Route path={'/home'} element={<HomePage/>}/>
                     <Route path={'/users'} element={<UsersPage/>}/>
-                    <Route path={'/todos'} element={<TodosPage/>}/>
-                    <Route path={'/users/:id/posts'} element={<UserPostsPage/>}/>
-                    <Route path={'/users/:id/albums'} element={<UserAlbumsPage/>}/>
-                    <Route path={'/users/:id/todos'} element={<UserTodosPage/>}/>
-                    <Route path={'/posts/:id/comments'} element={<PostCommentsPage/>}/>
-                    <Route/>
-                    <Route path={'*'} element={<NotFoundPage/>}/>
+                    <Route path={'/posts'} element={<PostsPage/>}>
+                        <Route path={':id'} element={<PostDetailsPage/>}/>
+                    </Route>
+                    <Route path={'/about'} element={<AboutPage/>}/>
                 </Route>
+                <Route path={'*'} element={<NotFoundPage/>}/>
             </Routes>
 
         </div>

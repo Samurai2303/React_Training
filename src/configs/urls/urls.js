@@ -1,12 +1,8 @@
-let baseUrl = 'https://jsonplaceholder.typicode.com';
+let baseURL = 'https://jsonplaceholder.typicode.com';
 
 let urls = {
-    users: '/users',
     posts: '/posts',
-    comments: '/comments',
-    albums: '/albums',
-    photos: '/photos',
-    todos: '/todos'
+    users: '/users'
 }
 
-export {baseUrl, urls};
+export {baseURL, urls};

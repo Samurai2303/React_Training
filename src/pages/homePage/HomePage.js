@@ -1,10 +1,10 @@
-import {Home} from "../../components";
-
 function HomePage() {
 
-    return (
-        <Home/>
-    );
+  return (
+      <div>
+Home page
+      </div>
+  );
 }
 
 export {HomePage};

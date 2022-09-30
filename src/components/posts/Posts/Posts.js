@@ -12,7 +12,7 @@ function Posts() {
 
     return (
         <div>
-            {posts.length ? posts.map((value, index) => <Post post={value} key={index}/>) : <div>Loading...</div>}
+            {posts.length ? posts.map(value => <Post post={value} key={value.id}/>) : <div>Loading...</div>}
         </div>
     );
 }

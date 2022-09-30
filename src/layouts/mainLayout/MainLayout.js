@@ -1,14 +1,14 @@
-import {Posts} from "../../components";
+import {Header} from "../../components";
 import {Outlet} from 'react-router-dom';
 
-function PostsPage() {
+function MainLayout() {
 
     return (
         <div>
+            <Header/>
             <Outlet/>
-            <Posts/>
         </div>
     );
 }
 
-export {PostsPage};
+export {MainLayout};
