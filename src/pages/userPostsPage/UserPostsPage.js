@@ -2,9 +2,9 @@ import {UserPosts} from "../../components";
 
 function UserPostsPage() {
 
-  return (
-      <UserPosts/>
-  );
+    return (
+            <UserPosts/>
+    );
 }
 
 export {UserPostsPage};

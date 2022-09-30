@@ -6,7 +6,7 @@ import {
     HeaderPage,
     HomePage,
     NotFoundPage,
-    PhotosPage,
+    PhotosPage, PostCommentsPage,
     PostsPage,
     TodosPage, UserAlbumsPage, UserPostsPage,
     UsersPage, UserTodosPage
@@ -28,6 +28,8 @@ function App() {
                     <Route path={'/users/:id/posts'} element={<UserPostsPage/>}/>
                     <Route path={'/users/:id/albums'} element={<UserAlbumsPage/>}/>
                     <Route path={'/users/:id/todos'} element={<UserTodosPage/>}/>
+                    <Route path={'/posts/:id/comments'} element={<PostCommentsPage/>}/>
+                    <Route/>
                     <Route path={'*'} element={<NotFoundPage/>}/>
                 </Route>
             </Routes>

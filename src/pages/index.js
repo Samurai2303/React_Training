@@ -10,3 +10,4 @@ export * from './todosPage/TodosPage';
 export * from './userPostsPage/UserPostsPage';
 export * from './userAlbumsPage/UserAlbumsPage';
 export * from './userTodosPage/UserTodosPage';
+export * from './postCommentsPage/PostCommentsPage';

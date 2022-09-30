@@ -1,5 +1,5 @@
 import {useParams} from "react-router-dom";
-import {postsService} from "../../../services/posts.service";
+import {postsService} from "../../../services";
 import {useEffect, useState} from "react";
 import {Post} from "../Post/Post";
 

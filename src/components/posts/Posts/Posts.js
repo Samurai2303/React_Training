@@ -1,10 +1,20 @@
+import {useEffect, useState} from "react";
+import {postsService} from "../../../services";
+import {Post} from "../Post/Post";
+
 function Posts() {
+    let [posts, setPosts] = useState([]);
 
-  return (
-      <div>
+    useEffect(() => {
+        postsService.getAll().then(({data}) => setPosts(data));
+    }, []);
 
-      </div>
-  );
+
+    return (
+        <div>
+            {posts.length ? posts.map((value, index) => <Post post={value} key={index}/>) : <div>Loading...</div>}
+        </div>
+    );
 }
 
 export {Posts};

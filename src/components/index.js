@@ -16,3 +16,4 @@ export * from './todos/Todo/Todo';
 export * from './posts/userPosts/UserPosts';
 export * from './albums/UserAlbums/UserAlbums';
 export * from './todos/UserTodos/UserTodos';
+export * from './comments/postComments/PostComments';
