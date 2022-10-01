@@ -16,8 +16,8 @@ function App() {
                         <Route path={':id'} element={<PostDetailsPage/>}/>
                     </Route>
                     <Route path={'/about'} element={<AboutPage/>}/>
+                    <Route path={'*'} element={<NotFoundPage/>}/>
                 </Route>
-                <Route path={'*'} element={<NotFoundPage/>}/>
             </Routes>
 
         </div>

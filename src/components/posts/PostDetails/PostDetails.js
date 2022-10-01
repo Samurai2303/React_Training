@@ -9,8 +9,10 @@ function PostDetails() {
     useEffect(() => {
         if (!state) {
             postsService.getById(id).then(({data}) => setPost(data));
+        }else{
+            setPost(state);
         }
-    }, [id]);
+    }, [id, state]);
 
   return (
       <div>
