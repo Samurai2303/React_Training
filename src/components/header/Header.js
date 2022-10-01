@@ -1,14 +1,15 @@
-import {NavLink, Outlet} from "react-router-dom";
+import {NavLink, Outlet, useNavigate} from "react-router-dom";
 import {urls} from "../../configs";
 import css from './header.module.css';
 
 function Header() {
+    let navigate = useNavigate();
 
   return (
       <div>
           <div className={css.header}>
-          <button>Prev</button>
-          <button>Next</button>
+          <button onClick={()=>navigate(-1)}>Prev</button>
+          <button onClick={()=>navigate(1)}>Next</button>
           <NavLink to={''}>Home</NavLink>
           <NavLink to={urls.users}>Users</NavLink>
           <NavLink to={urls.posts}>Posts</NavLink>
