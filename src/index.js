@@ -9,7 +9,7 @@ let Context = createContext({});
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-    <Context.Provider value={{}}>
+    <Context.Provider value={{users:[], setUsers:{}}}>
         <BrowserRouter>
             <App/>
         </BrowserRouter>

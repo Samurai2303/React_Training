@@ -1,10 +1,19 @@
+import {useEffect, useState} from "react";
+import {todosService} from "../../../services";
+import {Todo} from "../Todo/Todo";
+
 function Todos() {
+    let [todos, setTodos] = useState([]);
 
-  return (
-      <div>
+    useEffect(() => {
+        todosService.getAll().then(({data}) => setTodos(data));
+    }, []);
 
-      </div>
-  );
+    return (
+        <div>
+            {todos.length ? todos.map((value, index) => <Todo todo={value} key={index}/>) : <div>Loading...</div>}
+        </div>
+    );
 }
 
 export {Todos};
