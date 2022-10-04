@@ -1,0 +1,11 @@
+.header {
+    height: 40px;
+    background: lightskyblue;
+    padding: 10px;
+    display: flex;
+}
+
+.buttons {
+    margin: 5px;
+    display: block;
+}
