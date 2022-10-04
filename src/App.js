@@ -1,31 +1,15 @@
 import './App.css';
-import {Route, Routes, Navigate} from "react-router-dom";
-import {MainLayout} from "./layouts";
-import {AboutPage, HomePage, NotFoundPage, PostDetailsPage, PostsPage, UsersPage} from "./pages";
-import {Login} from "./components";
-import {RequiredAuth} from "./hoc";
+import {Counter1, Counter2, CountReduse} from "./components";
 
 function App() {
 
     return (
         <div>
-            <Routes>
-                <Route path={'/'} element={<MainLayout/>}>
-                    <Route index element={<Navigate to={'/home'}/>}/>
-                    <Route path={'/home'} element={<HomePage/>}/>
-                    <Route path={'/users'} element={<UsersPage/>}/>
-                    <Route path={'/posts'} element={
-                        <RequiredAuth>
-                            <PostsPage/>
-                        </RequiredAuth>
-                    }>
-                        <Route path={':id'} element={<PostDetailsPage/>}/>
-                    </Route>
-                    <Route path={'/about'} element={<AboutPage/>}/>
-                    <Route path={'/login'} element={<Login/>}/>
-                    <Route path={'*'} element={<NotFoundPage/>}/>
-                </Route>
-            </Routes>
+            <CountReduse/>
+            <hr/>
+            <Counter1/>
+            <hr/>
+            <Counter2/>
 
         </div>
     );

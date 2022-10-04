@@ -4,22 +4,15 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import {BrowserRouter} from "react-router-dom";
-import {AuthProvider} from "./hoc";
 
-let Context = createContext({user: null, post: null});
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-    <AuthProvider>
-        <Context.Provider value={{user: 'Andrii', post: 'post'}}>
-            <BrowserRouter>
-                <App/>
-            </BrowserRouter>
-        </Context.Provider>
-    </AuthProvider>
+    <BrowserRouter>
+        <App/>
+    </BrowserRouter>
 );
 
-export {Context};
 
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))
