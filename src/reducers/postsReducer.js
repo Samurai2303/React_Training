@@ -5,7 +5,7 @@ export function postsReducer(state = {posts: [], post: null}, action) {
         case actions.loadPosts:
             return {...state, posts: action.payload};
         case actions.getPost:
-            let post = state.posts.find(value => value.id === action.payload);
+            let post = state.posts.find(value => value.id === +action.payload);
             return {...state, post};
         default:
             return {...state};

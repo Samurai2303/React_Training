@@ -11,19 +11,12 @@ function Users() {
     let dispatch = useDispatch();
 
     useEffect(() => {
-        usersService.getAll().then(({data}) => {
-            dispatch({type: actions.loadUsers, payload: data});
-
-        }).then(value => {
-        console.log(users);
-
-        });
+        usersService.getAll().then(({data}) => dispatch({type: actions.loadUsers, payload: data}));
     }, []);
 
     let users = useSelector((state) => state.usersReducer.users);
 
     function show(id) {
-        console.log(id);
         dispatch({type: actions.getUser, payload: id});
     }
 
@@ -31,9 +24,11 @@ function Users() {
 
     return (
         <div>
-            {user&&<UserDetails user={user}/>}
+            {user ? <UserDetails user={user}/> : <div>No user selected...</div>}
+            <hr/>
             <input type="number" placeholder={'user id'} ref={input}/>
-            <button onClick={()=>show(input.current.value)}>Show</button>
+            <button onClick={() => show(input.current.value)}>Show</button>
+            <hr/>
             {users.length ? users.map(value => <User user={value} key={value.id}/>) : <div>Loading...</div>}
         </div>
     );

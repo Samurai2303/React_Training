@@ -5,7 +5,7 @@ export function commentsReducer(state = {comments: [], comment: null}, action) {
         case actions.loadComments:
             return {...state, comments: action.payload};
         case actions.getComment:
-            let comment = state.comments.find(value => value.id === action.payload);
+            let comment = state.comments.find(value => value.id === +action.payload);
             return {...state, comment};
         default:
             return {...state};

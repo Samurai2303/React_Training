@@ -5,9 +5,8 @@ export function usersReducer(state = {users: [], user: null}, action) {
         case actions.loadUsers:
             return {...state, users: action.payload};
         case actions.getUser:
-            let index = state.users.findIndex(value => value.id === action.payload);
-            console.log(index);
-            return {...state, user: state.users[index]};
+            let user = state.users.find(value => value.id === +action.payload);
+            return {...state, user};
         default:
             return {...state};
     }
