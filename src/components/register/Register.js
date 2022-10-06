@@ -16,7 +16,7 @@ function Register() {
            await authService.register(user);
             navigate('./login');
         } catch (e) {
-            setError(e.response.data?.username);
+            setError(e.response?.data?.username);
         }
         reset();
     }
