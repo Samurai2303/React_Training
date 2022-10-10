@@ -1,8 +1,9 @@
 import {useDispatch, useSelector} from "react-redux";
-import {PostFromApi, Posts, SelectedPost} from "../../components";
-import css from './postsPage.module.css';
 import {useEffect} from "react";
+
+import {PostFromApi, Posts, SelectedPost} from "../../components";
 import {postsActions} from "../../redux";
+import css from './postsPage.module.css';
 
 function PostsPage() {
 

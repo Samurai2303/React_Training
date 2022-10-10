@@ -1,10 +1,10 @@
 function HomePage() {
 
-  return (
-      <div>
-Home page
-      </div>
-  );
+    return (
+        <div>
+            Home page
+        </div>
+    );
 }
 
 export {HomePage};

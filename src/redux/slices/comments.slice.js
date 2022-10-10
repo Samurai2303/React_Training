@@ -1,5 +1,6 @@
 import {createAsyncThunk, createSlice} from "@reduxjs/toolkit";
-import {commentsService} from "../../services/comments.service";
+
+import {commentsService} from "../../services";
 
 let initialState = {
     comments: [],

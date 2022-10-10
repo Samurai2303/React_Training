@@ -1,4 +1,5 @@
 import {useDispatch} from "react-redux";
+
 import {postsActions} from "../../../redux";
 
 function Post({post}) {

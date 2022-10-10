@@ -1,8 +1,8 @@
-import {SelectedUser, Users} from "../../components";
 import {useDispatch, useSelector} from "react-redux";
-import {userActions} from "../../redux";
 import {useEffect} from "react";
-import {UserFromApi} from "../../components";
+
+import {userActions} from "../../redux";
+import {SelectedUser, UserFromApi, Users} from "../../components";
 import css from './usersPage.module.css';
 
 function UsersPage() {

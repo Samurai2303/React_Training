@@ -1,7 +1,6 @@
 import {combineReducers, configureStore} from "@reduxjs/toolkit";
-import {userReducer} from "./slices/users.slice";
-import {postsReducer} from "./slices/posts.slice";
-import {commentsReducer} from "./slices/comments.slice";
+
+import {commentsReducer, postsReducer, userReducer} from "./slices";
 
 let rootReducer = combineReducers({
     userReducer,
