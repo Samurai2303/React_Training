@@ -1,0 +1,37 @@
+.wrap {
+    height: 50px;
+    background: rgba(0, 0, 0, 0.82);
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    border: 2px solid cyan;
+    box-shadow: 3px 3px 5px 3px silver;
+    overflow: hidden;
+}
+
+.wrap a {
+    width: 100px;
+    height: 30px;
+    color: cyan;
+    font-weight: 600;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid cyan;
+    border-radius: 10px;
+    transition: 300ms;
+    text-decoration: none;
+}
+
+.wrap a:hover {
+    box-shadow: 0 0 30px 5px cyan,
+    inset 0 0 30px 5px cyan;
+}
+
+.wrap a[class='active'] {
+    background: cyan;
+    color: black;
+    filter: blur(0.8);
+}
+
+
