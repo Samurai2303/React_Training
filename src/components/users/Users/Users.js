@@ -17,7 +17,7 @@ function Users() {
             {usersLoading && <div>Loading users...</div>}
             {usersError && <div>Error(</div>}
             {usersLoading ? false : usersError ? false : users.length ?
-                users.map((value, index) => <User user={value} key={index}/>) :
+                users.map((value, index) => <User user={value} indexId={index} key={index}/>) :
                 <div>Have no users</div>}
         </div>
     );

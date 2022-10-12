@@ -17,9 +17,9 @@ function App() {
                     <Route path={localUrls.users} element={<UsersPage/>}/>
                     <Route path={localUrls.posts} element={<PostsPage/>}/>
                     <Route path={localUrls.comments} element={<CommentsPage/>}/>
+                    <Route path={localUrls.todos} element={<TodosPage/>}/>
                     <Route path={localUrls.albums} element={<AlbumsPage/>}/>
                     <Route path={localUrls.photos} element={<PhotosPage/>}/>
-                    <Route path={localUrls.todos} element={<TodosPage/>}/>
                 </Route>
 
                 <Route path={localUrls.carsApi} element={<CarsApiLayout/>}>

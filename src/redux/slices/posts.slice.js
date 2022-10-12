@@ -43,7 +43,7 @@ let postsSlice = createSlice({
             })
 });
 
-let {reducer: postsReducer, action: {selectPost}} = postsSlice;
+let {reducer: postsReducer, actions: {selectPost}} = postsSlice;
 
 let postsActions = {
     getAll,

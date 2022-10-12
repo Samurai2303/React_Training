@@ -1,7 +1,9 @@
-import {useSelector} from "react-redux";
+import {useDispatch, useSelector} from "react-redux";
+import {usersActions} from "../../../redux";
 
 function SelectedUser() {
 
+    let dispatch = useDispatch();
     let {selectedUser} = useSelector(state => state.usersReducer);
 
     return (
@@ -27,7 +29,7 @@ function SelectedUser() {
                         CatchPhrase - {selectedUser.company.catchPhrase} <br/>
                         Bs - {selectedUser.company.bs}</p>
                 </div>
-                <div>Close</div>
+                <div onClick={() => dispatch(usersActions.selectUser(null))}>Close</div>
             </div>}
 
         </div>

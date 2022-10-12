@@ -5,8 +5,11 @@ let initialState = {
     users: [],
     usersLoading: false,
     usersError: null,
-    selectedUser: null
-}
+    selectedUser: null,
+    newUserForm: false,
+    postLoading: false,
+    postError: null
+};
 
 let getAll = createAsyncThunk(
     'usersSlice/getAll',
@@ -20,12 +23,27 @@ let getAll = createAsyncThunk(
     }
 );
 
+let postUser = createAsyncThunk(
+    'usersSlice/postUser',
+    async({user}, {rejectWithValue}) => {
+        try {
+            let {data} = await usersService.postUser(user);
+            return data;
+        }catch (e) {
+            return rejectWithValue(e.response.data);
+        }
+    }
+)
+
 let usersSlice = createSlice({
     name: 'usersSlice',
     initialState,
     reducers: {
         selectUser: (state, action) => {
-            state.selectedUser = state.users.find(value => value.id === action.payload);
+            state.selectedUser = state.users[action.payload];
+        },
+        toggleForm: (state) => {
+            state.newUserForm ? state.newUserForm = false : state.newUserForm = true;
         }
     },
     extraReducers: builder =>
@@ -41,15 +59,27 @@ let usersSlice = createSlice({
             .addCase(getAll.pending, (state) => {
                 state.usersLoading = true;
             })
+            .addCase(postUser.fulfilled, (state, action) => {
+                state.users.push(action.payload);
+                state.postLoading = false;
+            })
+            .addCase(postUser.rejected, (state, action) => {
+                state.postError = action.payload;
+                state.postLoading = false;
+            })
+            .addCase(postUser.pending, (state) => {
+                state.postLoading = true;
+            })
 
 });
 
-let {reducer: usersReducer, actions: {selectUser}} = usersSlice;
+let {reducer: usersReducer, actions: {selectUser, toggleForm}} = usersSlice;
 
 let usersActions = {
     getAll,
-    selectUser
-
+    postUser,
+    selectUser,
+    toggleForm
 }
 
 export {usersReducer, usersActions};

@@ -1,0 +1,20 @@
+.btn{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: 3px solid cyan;
+    background: #282c34;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 0 10px 5px cyan;
+    transition: 300ms;
+    color: cyan;
+}
+
+.btn:hover{
+    color: black;
+    background: cyan;
+    border: 3px solid black;
+    box-shadow: 0 0 20px 5px cyan;
+}

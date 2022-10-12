@@ -1,0 +1,18 @@
+.wrap {
+    background: #262626;
+    border: 2px solid cyan;
+    border-radius: 10px;
+    box-shadow: 0 0 10px 0 cyan;
+    padding: 10px;
+    color: cyan;
+    height: 20px;
+    transition: 300ms;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 10px;
+    font-weight: 500;
+}
+.wrap:hover{
+    box-shadow: 0 0 10px 5px cyan, inset 0 0 25px 5px cyan;
+}

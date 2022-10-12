@@ -5,7 +5,7 @@ import {Post} from "../Post/Post";
 
 function Posts() {
 
-    let {posts, postsLoading, postsError} = useSelector(state => state.postsReducer());
+    let {posts, postsLoading, postsError} = useSelector(state => state.postsReducer);
     let dispatch = useDispatch();
 
     useEffect(() => {
@@ -18,7 +18,6 @@ function Posts() {
             {postsError && <div>Error(</div>}
             {postsLoading ? false : postsError ? false : posts ?
                 posts.map((value, index) => <Post post={value} key={index}/>) : <div>Have no posts</div>}
-
         </div>
     );
 }

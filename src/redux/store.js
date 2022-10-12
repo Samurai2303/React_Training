@@ -1,9 +1,13 @@
 import {combineReducers, configureStore} from "@reduxjs/toolkit";
-import {postsReducer, usersReducer} from "./slices";
+import {albumsReducer, commentsReducer, photosReducer, postsReducer, todosReducer, usersReducer} from "./slices";
 
 let rootReducer = combineReducers({
     usersReducer,
-    postsReducer
+    postsReducer,
+    commentsReducer,
+    todosReducer,
+    albumsReducer,
+    photosReducer
 });
 
 let store = configureStore({
